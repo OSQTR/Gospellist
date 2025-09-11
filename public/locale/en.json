@@ -7,7 +7,25 @@
     },
     "section1": {
       "title": "Team",
-      "sub_title": "Members who realize the mission."
+      "sub_title": "Members who realize the mission.",
+      "members": [
+        {
+          "name": "Young-Soo Jun",
+          "avatar": "/img/jun.png",
+          "position": "CEO",
+          "tag": "CEO",
+          "bio": "Elder of Onnuri Church",
+          "contact": "vines51@gmail.com"
+        },
+        {
+          "name": "Moses Lee",
+          "avatar": "/img/moses.jpeg",
+          "position": "Director",
+          "tag": "Director",
+          "bio": "Programmer, Designer",
+          "contact": "clecat1005@gmail.com"
+        }
+      ]
     }
   }
 }

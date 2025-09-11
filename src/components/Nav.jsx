@@ -10,14 +10,19 @@ import {
   Heading,
   IconButton,
   Tooltip,
+  Box,
+  Section,
 } from "@radix-ui/themes";
 import { Sun, Moon, Globe } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme } from "../features/themeSlice";
 import { setLang } from "../features/langSlice";
 import logoUrl from "../assets/logo.svg";
+// import useOrientation from "../hooks/useOrientation";
+import Hamberger from "./Hamberger";
 
 export default function Nav() {
+  //   const orientation = useOrientation();
   const dispatch = useDispatch();
   const mode = useSelector((s) => s.theme.mode);
   const lang = useSelector((s) => s.lang.code);
@@ -31,9 +36,10 @@ export default function Nav() {
 
   return (
     <nav className="fixed-box">
-      <Container
-        size="3"
-        py="3"
+      <Section
+        size="4"
+        py="2"
+        px="2"
         className={`nav-box${mode === "dark" ? " nav-box-dark" : ""}`}
       >
         <Flex justify="between" align="center" wrap="wrap" gap="4">
@@ -48,8 +54,8 @@ export default function Nav() {
               <img
                 src={logoUrl}
                 alt="Gospellist logo"
-                width={28}
-                height={28}
+                width={32}
+                height={32}
                 style={{ display: "block" }}
               />
               <Heading size="3" color="gray" className="logo">
@@ -57,7 +63,13 @@ export default function Nav() {
               </Heading>
             </RouterLink>
           </Flex>
-          <Flex gap="4" align="center">
+          {/* {orientation === "landscape" ? ( */}
+
+          <Flex
+            gap="4"
+            align="center"
+            display={{ initial: "none", sm: "flex" }}
+          >
             {LINKS.map(({ to, label, match }) => (
               <RLink
                 key={to}
@@ -72,7 +84,11 @@ export default function Nav() {
             ))}
           </Flex>
 
-          <Flex gap="5" align="center">
+          <Flex
+            gap="5"
+            align="center"
+            display={{ initial: "none", sm: "flex" }}
+          >
             <Flex gap="3" align="center">
               {/* Language toggle: KO <-> EN */}
               <Tooltip content={lang.toUpperCase()}>
@@ -105,14 +121,16 @@ export default function Nav() {
                   {mode === "dark" ? <Sun /> : <Moon />}
                 </IconButton>
               </Tooltip>
-              {/* <Text size="2" style={{ minWidth: 38, textAlign: "center" }}>
-                {mode === "dark" ? "Dark" : "Light"}
-              </Text> */}
             </Flex>
           </Flex>
+
+          {/* ) : ( */}
+          <Box display={{ initial: "block", sm: "none" }}>
+            <Hamberger links={LINKS} />
+          </Box>
+          {/* )} */}
         </Flex>
-      </Container>
-      {/* <Separator size="4" /> */}
+      </Section>
     </nav>
   );
 }

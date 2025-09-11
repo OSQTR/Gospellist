@@ -6,8 +6,43 @@
       "cta": "사역소개"
     },
     "section1": {
-      "title": "구성원",
-      "sub_title": "사역을 실현하는 멤버입니다."
+      "title": "팀",
+      "sub_title": "사역을 실현하는 현재 팀 멤버입니다.",
+      "members": [
+        {
+          "name": "전영수",
+          "avatar": "/img/jun.png",
+          "position": "대표이사",
+          "tag": "CEO",
+          "bio": "온누리교회 장로",
+          "contact": "vines51@gmail.com"
+        },
+        {
+          "name": "이모세",
+          "avatar": "/img/moses.jpeg",
+          "position": "이사",
+          "tag": "Director",
+          "bio": "Programmer, Designer",
+          "contact": "clecat1005@gmail.com"
+        }
+      ]
+    },
+    "section2": {
+      "title": "여러분 덕분에 할 수 있었던 일들",
+      "sub_title": "현장의 소리를 반영한 지원",
+      "li": [
+        "중동 지역에서 디지털 선교를 위해 성경앱을 개발하고 전도팀을 지원했습니다.",
+        "축적된 경험과 지식으로 성경앱 보급의 가능성을 확인했습니다."
+      ]
+    },
+    "section3": {
+      "title": "동참하고 지원해주세요",
+      "sub_title": "그들에게 가장 필요한 것",
+      "li": [
+        "성경앱을 새롭게 개발·보급해 누구나 매일 말씀을 접하도록 돕겠습니다.",
+        "청년들을 IT기술자 및 미디어전문가로 양성하고 실제 사역에 참여할 기회를 열겠습니다.",
+        "열방의 디지털 전도팀을 지속적으로 지원하고 협력하겠습니다."
+      ]
     }
   }
 }
