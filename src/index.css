@@ -1,0 +1,46 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "SfHambakneun";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff")
+    format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-family: "SfHambakneun";
+}
+
+.fixed-box {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border: none;
+}
+
+.nav-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  margin: 4px;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);
+}
+
+.nav-box-dark {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 1px 5px 0px rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+}
