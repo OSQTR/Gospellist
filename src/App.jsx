@@ -7,6 +7,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import { loadMessages } from "./features/i18nSlice";
+import Project from "./pages/Project";
 
 export default function App() {
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/project" element={<Project />} />
         </Route>
       </Routes>
     </Theme>

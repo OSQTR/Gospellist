@@ -40,7 +40,7 @@ export default function Hamberger({ links = [] }) {
         </IconButton>
       </Popover.Trigger>
 
-      <Popover.Content width="100%" sideOffset={8} align="end">
+      <Popover.Content width="100%" align="end">
         <Flex direction="column" gap="3" style={{ minWidth: 220 }}>
           {links.map(({ to, label, match }) => (
             <RLink
@@ -58,34 +58,42 @@ export default function Hamberger({ links = [] }) {
           <Separator size="4" />
 
           <Flex gap="5" align="center" justify="center">
-            <IconButton
-              variant="ghost"
-              color="gray"
-              radius="full"
-              aria-label={`Toggle language (current: ${lang})`}
-              onClick={() => dispatch(setLang(lang === "en" ? "ko" : "en"))}
-            >
-              <Globe />
-              <Text size="2" style={{ minWidth: 28, textAlign: "center" }}>
+            {/* Language toggle: icon stays fixed, label outside with fixed width */}
+            <Flex align="center" gap="2">
+              <IconButton
+                variant="ghost"
+                color="gray"
+                radius="full"
+                aria-label={`Toggle language (current: ${lang})`}
+                onClick={() => dispatch(setLang(lang === "en" ? "ko" : "en"))}
+              >
+                <Globe />
+              </IconButton>
+              <Text size="2" style={{ width: 32, textAlign: "center" }}>
                 {lang.toUpperCase()}
               </Text>
-            </IconButton>
+            </Flex>
+
             <Separator orientation="vertical" />
-            <IconButton
-              variant="ghost"
-              color="gray"
-              radius="full"
-              aria-label="Toggle dark mode"
-              aria-pressed={mode === "dark"}
-              onClick={() =>
-                dispatch(setTheme(mode === "dark" ? "light" : "dark"))
-              }
-            >
-              {mode === "dark" ? <Sun /> : <Moon />}
-              <Text size="2" style={{ minWidth: 40, textAlign: "center" }}>
+
+            {/* Theme toggle: icon stays fixed, label outside with fixed width */}
+            <Flex align="center" gap="2">
+              <IconButton
+                variant="ghost"
+                color="gray"
+                radius="full"
+                aria-label="Toggle dark mode"
+                aria-pressed={mode === "dark"}
+                onClick={() =>
+                  dispatch(setTheme(mode === "dark" ? "light" : "dark"))
+                }
+              >
+                {mode === "dark" ? <Sun /> : <Moon />}
+              </IconButton>
+              <Text size="2" style={{ width: 44, textAlign: "center" }}>
                 {mode === "dark" ? "Dark" : "Light"}
               </Text>
-            </IconButton>
+            </Flex>
           </Flex>
         </Flex>
       </Popover.Content>

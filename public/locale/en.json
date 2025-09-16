@@ -1,20 +1,20 @@
 {
   "home": {
     "main": {
-      "title": "We aim to be the spearhead of devotion ministry.",
-      "sub_title": "We build and distribute a Bible app so seekers, unbelievers, and believers read daily.",
+      "title": "Gospellist",
+      "sub_title": "develops and distributes Bible apps worldwide to inspire both non-believers and believers to engage with the Word of God daily.",
       "cta": "About Ministry"
     },
     "section1": {
       "title": "Team",
-      "sub_title": "Members who realize the mission.",
+      "sub_title": "Our current team members who carry out the ministry.",
       "members": [
         {
-          "name": "Young-Soo Jun",
+          "name": "Young-soo Jun",
           "avatar": "/img/jun.png",
           "position": "CEO",
           "tag": "CEO",
-          "bio": "Elder of Onnuri Church",
+          "bio": "Elder at Onnuri Church, Planner",
           "contact": "vines51@gmail.com"
         },
         {
@@ -26,6 +26,63 @@
           "contact": "clecat1005@gmail.com"
         }
       ]
+    },
+    "section2": {
+      "title": "What we have been able to do thanks to you",
+      "sub_title": "Support shaped by voices from the field",
+      "li": [
+        "We developed Bible apps and supported evangelism teams for digital missions in the Middle East.",
+        "With accumulated experience and knowledge, we confirmed the potential for distributing Bible apps."
+      ]
+    },
+    "section3": {
+      "title": "The path we are heading toward",
+      "sub_title": "What they need most",
+      "li": [
+        "We will newly develop and distribute Bible apps so that anyone can access the Word daily.",
+        "We will raise young people as IT specialists and media professionals, and open opportunities for them to engage in ministry.",
+        "We will continue to support and collaborate with digital evangelism teams across the nations."
+      ],
+      "cta": "About Project"
+    }
+  },
+  "about": {
+    "main": {
+      "title": "Gospellist",
+      "sub_title": "Gospellist is a non-profit organization dedicated to developing and distributing Bible apps."
+    },
+    "section1": {
+      "title": "Our Mission",
+      "text": [
+        "Our mission is to create and share Bible apps that help seekers, non-believers, and believers around the world engage with Scripture daily. We believe that when people encounter God’s Word each day, lives are transformed.",
+        "To fulfill this mission, we have already built strong capabilities in Bible app development and are actively working on new projects to meet the needs of a global audience."
+      ]
+    },
+    "section2": {
+      "title": "Empowering Underprivileged Youth",
+      "text": [
+        "We are also committed to training young people from underprivileged communities to become skilled app developers. By sharing our experience and knowledge in Bible app development, we provide these youth with real learning opportunities—and real work. They are not only trained but also given projects, enabling them to participate in app development and build a path toward economic self-reliance."
+      ]
+    },
+    "section3": {
+      "title": "Supporting Digital Evangelism Worldwide",
+      "text": [
+        "Before founding this organization, our core members were already engaged in developing Bible apps and supporting digital evangelism teams in the Middle East. Now, we are expanding this work to support digital mission teams across the globe—providing tools, training, and spiritual resources to help them share the Gospel effectively in the digital age."
+      ]
+    },
+    "section4": {
+      "title": "We Do This Together—with Gospellists",
+      "text": [
+        "We believe that this mission is carried out together with Gospellists from all walks of life:",
+        "- Developers who build the tools,",
+        "- Missionaries and Pastors who share the apps,",
+        "- Donors who give generously,",
+        "- Intercessors who pray faithfully,",
+        "- And Bible readers who live out the Word each day."
+      ]
+    },
+    "section5": {
+      "title": "You are Gospellist."
     }
   }
 }

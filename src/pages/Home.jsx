@@ -7,6 +7,7 @@ import {
   Card,
   Container,
   Flex,
+  Grid,
   Heading,
   Section,
   Separator,
@@ -17,6 +18,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import ImageUrl from "../assets/undraw_connected-world_anke.svg";
+import ImageUrl2 from "../assets/undraw_stepping-up.svg";
 import { Flag, Plus } from "lucide-react";
 
 export default function Home() {
@@ -31,8 +33,12 @@ export default function Home() {
   const s2 = messages?.home?.section2 || {};
   const s3 = messages?.home?.section3 || {};
 
-  const ctaHandler = () => {
+  const goAbout = () => {
     navigate("/about");
+  };
+
+  const goGoal = () => {
+    navigate("/project");
   };
 
   return (
@@ -56,7 +62,7 @@ export default function Home() {
               variant="solid"
               size="3"
               radius="full"
-              onClick={ctaHandler}
+              onClick={goAbout}
             >
               {t.cta}
             </Button>
@@ -72,7 +78,7 @@ export default function Home() {
         </Flex>
       </Container>
       <Separator size="4" />
-      <Section size="4" style={{ backgroundColor: "#e0efef10" }}>
+      <Section size="1" style={{ backgroundColor: "#e0efef10" }}>
         <Flex
           my="8"
           direction={{ initial: "column-reverse", sm: "row-reverse" }}
@@ -93,12 +99,12 @@ export default function Home() {
               <Badge color="orange">Study</Badge>
               <Badge color="cyan">social mission</Badge>
             </Flex>
-            {s2.li?.map((li) => (
-              <Flex gap="3" align="center">
+            {s2.li?.map((li, idx) => (
+              <Flex key={idx} gap="3" align="center">
                 <Box flexBasis={1}>
                   <Flag />
                 </Box>
-                <Text as="p" color="gray" size="5" my="2" key={li.index}>
+                <Text as="p" color="gray" size="5" my="2">
                   {li}
                 </Text>
               </Flex>
@@ -118,6 +124,52 @@ export default function Home() {
       </Section>
 
       <Separator size="4" />
+      <Container size="4" px="2">
+        <Flex
+          my="5"
+          direction={{ initial: "column-reverse", sm: "row" }}
+          justify="center"
+          align="center"
+        >
+          <Box p="4" width={{ initial: "100%", sm: "50%" }}>
+            <Heading size="5" color="indigo">
+              {s3.sub_title}
+            </Heading>
+            <Heading size="9" color="indigo" weight="bold" my="4">
+              {s3.title}
+            </Heading>
+            {s3.li?.map((li, idx) => (
+              <Flex key={idx} gap="3" align="center">
+                <Box flexBasis={1}>
+                  <Flag />
+                </Box>
+                <Text as="p" color="gray" size="5" my="2">
+                  {li}
+                </Text>
+              </Flex>
+            ))}
+            <Button
+              color="indigo"
+              variant="solid"
+              size="3"
+              radius="full"
+              onClick={goGoal}
+            >
+              {s3.cta}
+            </Button>
+          </Box>
+          <Box width={{ initial: "60%", sm: "30%" }}>
+            <img
+              src={ImageUrl2}
+              alt="Our Goal"
+              width={"100%"}
+              height={"auto"}
+            />
+          </Box>
+        </Flex>
+      </Container>
+
+      <Separator size="4" />
 
       <Section size="2" align="center">
         <Heading size="9" color="indigo" align="center">
@@ -131,34 +183,41 @@ export default function Home() {
           justify="center"
           gap="4"
           wrap="wrap"
-          direction={{ initial: "column", sm: "row" }}
+          //   direction={{ initial: "column", sm: "row" }}
+          direction="row"
         >
           {s1.members?.map((member) => (
-            <Card key={member.contact} variant="classic" className="scale">
-              <Flex gap="3" align="center" direction="column">
-                <Avatar
-                  size="9"
-                  src={member.avatar || undefined}
-                  radius="small"
-                  fallback={member.name[0]}
-                />
-                <Flex gap="1">
-                  <Badge color="teal">Gospellist</Badge>
-                  <Badge color="blue">{member.tag}</Badge>
-                </Flex>
+            <Box key={member.contact} width="185px">
+              <Card variant="classic" className="scale" size="1">
+                <Flex gap="3" align="center" direction="column">
+                  <Avatar
+                    size="9"
+                    src={member.avatar || undefined}
+                    radius="small"
+                    fallback={member.name[0]}
+                  />
+                  <Flex gap="1" wrap="wrap">
+                    <Badge color="teal">Gospellist</Badge>
+                    <Badge color="blue">{member.tag}</Badge>
+                    <Badge color="indigo">South Korea</Badge>
+                  </Flex>
 
-                <Text as="h3" size="5" weight="bold" color="indigo">
-                  {member.name}
-                </Text>
-                <Text as="p" size="2">
-                  {member.bio}
-                </Text>
-                <Text as="div" size="1" color="gray">
-                  {member.contact}
-                </Text>
-              </Flex>
-            </Card>
+                  <Text as="h3" size="5" weight="bold" color="indigo">
+                    {member.name}
+                  </Text>
+                  <Box>
+                    <Text as="p" size="2">
+                      {member.bio}
+                    </Text>
+                  </Box>
+                  <Text as="div" size="1" color="gray">
+                    {member.contact}
+                  </Text>
+                </Flex>
+              </Card>
+            </Box>
           ))}
+
           <Tooltip content="Join the Team">
             <Button size="3" color="indigo" radius="full">
               <Plus />

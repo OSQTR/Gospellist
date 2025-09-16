@@ -31,6 +31,11 @@ export default function Nav() {
   const LINKS = [
     { to: "/", label: "Home", match: (p) => p === "/" },
     { to: "/about", label: "About", match: (p) => p.startsWith("/about") },
+    {
+      to: "/project",
+      label: "project",
+      match: (p) => p.startsWith("/project"),
+    },
     // 필요 시 여기에 계속 추가
   ];
 
@@ -63,7 +68,6 @@ export default function Nav() {
               </Heading>
             </RouterLink>
           </Flex>
-          {/* {orientation === "landscape" ? ( */}
 
           <Flex
             gap="4"
@@ -123,12 +127,9 @@ export default function Nav() {
               </Tooltip>
             </Flex>
           </Flex>
-
-          {/* ) : ( */}
           <Box display={{ initial: "block", sm: "none" }}>
             <Hamberger links={LINKS} />
           </Box>
-          {/* )} */}
         </Flex>
       </Section>
     </nav>

@@ -12,7 +12,7 @@ export const loadMessages = createAsyncThunk(
 
 const i18nSlice = createSlice({
   name: "i18n",
-  initialState: { current: "ko", messages: {}, status: "idle", error: null },
+  initialState: { current: "en", messages: {}, status: "idle", error: null },
   reducers: {},
   extraReducers: (b) => {
     b.addCase(loadMessages.pending, (s) => {
