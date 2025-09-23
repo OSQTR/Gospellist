@@ -1,0 +1,53 @@
+{
+  "fund": {
+    "target_amount": 14400,
+    "current_amount": 2000
+  },
+  "roadmap": {
+    "now": 2,
+    "phases": [
+      {
+        "title": "Planning & Requirements Definition",
+        "text": "Define purpose, user personas, and core features.",
+        "output": "Feature specification, wireframes, data flow diagrams",
+        "tags": ["planning", "MVP"]
+      },
+      {
+        "title": "Design & Prototyping",
+        "text": "Establish UX/UI design, confirm tech stack, and model data.",
+        "output": "High-fidelity mockups, API documentation, DB schema",
+        "tags": ["design", "prototype", "UX"]
+      },
+      {
+        "title": "Backend Development",
+        "text": "Set up server and database, build APIs, and load Bible data.",
+        "output": "AWS infrastructure, authentication system, tested APIs",
+        "tags": ["backend", "API", "AWS"]
+      },
+      {
+        "title": "App Development (Frontend)",
+        "text": "Build native Android/iOS UI, handle user inputs, integrate APIs.",
+        "output": "MVP mobile app with core features",
+        "tags": ["frontend", "mobile", "cross-platform"]
+      },
+      {
+        "title": "Integration & Testing",
+        "text": "Connect backend and app, perform QA, fix bugs, and optimize performance.",
+        "output": "QA reports, bug fixes, crash reporting",
+        "tags": ["integration", "testing", "QA"]
+      },
+      {
+        "title": "Deployment & Operations",
+        "text": "Publish to App Store and Play Store, set up monitoring and feedback channels.",
+        "output": "Signed builds, store listings, monitoring system",
+        "tags": ["deployment", "operations", "monitoring"]
+      },
+      {
+        "title": "Maintenance & Enhancement",
+        "text": "Incorporate feedback, release updates, improve performance, and design new features.",
+        "output": "App updates, CI/CD pipeline, extended features",
+        "tags": ["maintenance", "enhancement", "CI/CD"]
+      }
+    ]
+  }
+}

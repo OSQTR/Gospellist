@@ -14,15 +14,15 @@
           "avatar": "/img/jun.png",
           "position": "CEO",
           "tag": "CEO",
-          "bio": "Elder at Onnuri Church, Planner",
-          "contact": "vines51@gmail.com"
+          "bio": "Elder at Onnuri Church, Project Manager",
+          "contact": "vines56@gmail.com"
         },
         {
           "name": "Moses Lee",
           "avatar": "/img/moses.jpeg",
           "position": "Director",
           "tag": "Director",
-          "bio": "Programmer, Designer",
+          "bio": "App Dev, UX/UI Designer",
           "contact": "clecat1005@gmail.com"
         }
       ]
@@ -44,6 +44,10 @@
         "We will continue to support and collaborate with digital evangelism teams across the nations."
       ],
       "cta": "About Project"
+    },
+    "section4": {
+      "title": "Lumen365",
+      "sub_title": "Currently active projects"
     }
   },
   "about": {
@@ -74,15 +78,83 @@
       "title": "We Do This Together—with Gospellists",
       "text": [
         "We believe that this mission is carried out together with Gospellists from all walks of life:",
-        "- Developers who build the tools,",
-        "- Missionaries and Pastors who share the apps,",
-        "- Donors who give generously,",
-        "- Intercessors who pray faithfully,",
-        "- And Bible readers who live out the Word each day."
+        "Developers who build the tools,",
+        "Missionaries and Pastors who share the apps,",
+        "Donors who give generously,",
+        "Intercessors who pray faithfully,",
+        "And Bible readers who live out the Word each day."
       ]
     },
     "section5": {
       "title": "You are Gospellist."
+    }
+  },
+  "project": {
+    "main": {
+      "title": "Bible app to be developed",
+      "sub_title": "We are planning to develop a Bible app called Lumen365.",
+      "text": [
+        "The idea for this new Bible app was born out of a recurring challenge in digital evangelism: many seekers and non-believers respond to online gospel ads and request a Bible—but soon disappear without receiving proper follow-up from evangelism teams.",
+        "In addition, in many regions, it is still uncommon for church members to read and meditate on the Bible daily. Our goal is to develop an app that both encourages and enables seekers and believers to engage with Scripture every day."
+      ]
+    },
+    "features": [
+      {
+        "title": "Fully Personalized Bible Reading Plans",
+        "desc": "Tailored plans for individual users and churches, starting on chosen dates."
+      },
+      {
+        "title": "Pastor-Branded Commentary",
+        "desc": "Daily commentary aligned with Protestant doctrine, editable or recordable by pastors, with options for anonymity in sensitive areas."
+      },
+      {
+        "title": "Automated Daily Content Delivery",
+        "desc": "Mobile notifications deliver Scripture and commentary seamlessly each day."
+      },
+      {
+        "title": "Accessible Text and Audio Format",
+        "desc": "Content available in text and audio, leveraging FCBH resources for global reach."
+      },
+      {
+        "title": "Questions and AI-Recommended Answers",
+        "desc": "AI handles initial responses, linking apologetics content, with team oversight to ensure care and engagement."
+      },
+      {
+        "title": "Heart Tablet – A Personal Meditation Space",
+        "desc": "Users save verses, write reflections, and keep a lifelong archive of spiritual journaling."
+      },
+      {
+        "title": "Real-Time Ministry Statistics",
+        "desc": "Pastors and missionaries gain insights into user engagement for better discipleship and follow-up."
+      }
+    ],
+    "target_users": [
+      {
+        "title": "Seekers and Non-Believers",
+        "desc": "Replace printed Bibles with app-based daily content and care, scaling with partner teams’ vision to reach 100 million people by 2030."
+      },
+      {
+        "title": "Church Members",
+        "desc": "Churches design and distribute custom reading plans, fostering daily Scripture reading culture."
+      }
+    ],
+    "impact": {
+      "evangelism_teams": [
+        "Enable consistent engagement and long-term follow-up with seekers",
+        "Lower drop-off after initial Bible requests",
+        "Empower second-level evangelism using user data",
+        "Help seekers understand Christian doctrine through daily commentary",
+        "Increase conversion potential with sustained contact"
+      ],
+      "churches": [
+        "Strengthen daily connection between pastors and congregations",
+        "Enhance pastoral authority with branded commentary",
+        "Provide engagement data for pastoral care",
+        "Enable customized Bible reading plans",
+        "Support spiritual growth with clear Scripture explanations",
+        "Engage oral cultures through audio content",
+        "Encourage journaling via the Heart Tablet feature"
+      ]
     }
   }
 }

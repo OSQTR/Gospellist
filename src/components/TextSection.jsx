@@ -21,7 +21,7 @@ const TextSection = ({ text }) => {
               ) : null}
               {(text.li || text.text)?.map((line, idx) => (
                 <Text key={idx} as="p" color="gray" size="5" my="2" mt="6">
-                  {line}
+                  ○ {line}
                 </Text>
               ))}
             </Box>

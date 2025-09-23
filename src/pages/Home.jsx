@@ -20,6 +20,7 @@ import { useNavigate } from "react-router-dom";
 import ImageUrl from "../assets/undraw_connected-world_anke.svg";
 import ImageUrl2 from "../assets/undraw_stepping-up.svg";
 import { Flag, Plus } from "lucide-react";
+import ProgressPanel from "../components/Progress";
 
 export default function Home() {
   const { messages, status } = useSelector((s) => s.i18n);
@@ -32,6 +33,7 @@ export default function Home() {
   const s1 = messages?.home?.section1 || {};
   const s2 = messages?.home?.section2 || {};
   const s3 = messages?.home?.section3 || {};
+  const s4 = messages?.home?.section4 || {};
 
   const goAbout = () => {
     navigate("/about");
@@ -170,7 +172,16 @@ export default function Home() {
       </Container>
 
       <Separator size="4" />
-
+      <Container size="3" my="5">
+        <Heading size="5" color="indigo">
+          {s4.sub_title}
+        </Heading>
+        <Heading size="9" weight="bold" my="4">
+          {s4.title}
+        </Heading>
+        <ProgressPanel />
+      </Container>
+      <Separator size="4" />
       <Section size="2" align="center">
         <Heading size="9" color="indigo" align="center">
           {s1.title}
