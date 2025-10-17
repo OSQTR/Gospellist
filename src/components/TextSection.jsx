@@ -19,6 +19,11 @@ const TextSection = ({ text }) => {
                   {text.title}
                 </Heading>
               ) : null}
+              {text.text_head ? (
+                <Text as="p" color="gray" size="5" my="2" mt="6">
+                  {text.text_head}
+                </Text>
+              ) : null}
               {(text.li || text.text)?.map((line, idx) => (
                 <Text key={idx} as="p" color="gray" size="5" my="2" mt="6">
                   ○ {line}

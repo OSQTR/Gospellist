@@ -74,7 +74,7 @@ const ProgressPanel = () => {
   if (!data) return <Text size="2">No data</Text>;
 
   return (
-    <Flex direction="column" gap="4">
+    <Flex direction="column" gap="4" px="2">
       {/* Fund Gauge */}
       <Box>
         <Flex align="center" justify="between" mb="2">

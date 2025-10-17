@@ -76,8 +76,8 @@
     },
     "section4": {
       "title": "We Do This Together—with Gospellists",
+      "text_head": "We believe that this mission is carried out together with Gospellists from all walks of life:",
       "text": [
-        "We believe that this mission is carried out together with Gospellists from all walks of life:",
         "Developers who build the tools,",
         "Missionaries and Pastors who share the apps,",
         "Donors who give generously,",
@@ -124,7 +124,7 @@
         "desc": "Users save verses, write reflections, and keep a lifelong archive of spiritual journaling."
       },
       {
-        "title": "Real-Time Ministry Statistics",
+        "title": "Care Information",
         "desc": "Pastors and missionaries gain insights into user engagement for better discipleship and follow-up."
       }
     ],
@@ -153,7 +153,7 @@
         "Enable customized Bible reading plans",
         "Support spiritual growth with clear Scripture explanations",
         "Engage oral cultures through audio content",
-        "Encourage journaling via the Heart Tablet feature"
+        "Encourage journaling via the Tablet of My Heart Meditation feature."
       ]
     }
   }
