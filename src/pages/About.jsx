@@ -2,15 +2,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import {
-  Avatar,
-  Badge,
   Box,
   Button,
-  Card,
   Container,
   Flex,
   Heading,
-  Section,
   Separator,
   Text,
 } from "@radix-ui/themes";
