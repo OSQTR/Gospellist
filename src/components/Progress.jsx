@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { useSelector } from "react-redux";
 import {
   Card,
   Flex,
@@ -20,6 +21,10 @@ const toUSD = (n) =>
   }).format(n ?? 0);
 
 const ProgressPanel = () => {
+  const lang = useSelector((s) => s.lang.lang);
+  const messages = useSelector((s) => s.i18n.messages);
+  const labels = messages?.progress ?? {};
+
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -78,7 +83,7 @@ const ProgressPanel = () => {
       {/* Fund Gauge */}
       <Box>
         <Flex align="center" justify="between" mb="2">
-          <Text weight="bold">Fundraising Progress</Text>
+          <Text weight="bold">{labels.fundraising ?? "Fundraising Progress"}</Text>
           <Text color="gray">{fundPct}%</Text>
         </Flex>
         <Tooltip
@@ -91,11 +96,11 @@ const ProgressPanel = () => {
           </Box>
         </Tooltip>
         <Flex align="center" justify="between" mt="2">
-          <Text color="gray">Raised</Text>
+          <Text color="gray">{labels.raised ?? "Raised"}</Text>
           <Text weight="bold">{toUSD(fund?.current_amount)}</Text>
         </Flex>
         <Flex align="center" justify="between">
-          <Text color="gray">Goal</Text>
+          <Text color="gray">{labels.goal ?? "Goal"}</Text>
           <Text weight="bold">{toUSD(fund?.target_amount)}</Text>
         </Flex>
       </Box>
@@ -103,9 +108,11 @@ const ProgressPanel = () => {
       {/* Roadmap */}
       <Box>
         <Flex align="center" justify="between" mb="2">
-          <Text weight="bold">Roadmap</Text>
+          <Text weight="bold">{labels.roadmap ?? "Roadmap"}</Text>
           <Text color="gray">
-            Step {nowIdx} of {totalSteps}
+            {lang === "ko"
+              ? `${nowIdx} / ${totalSteps} 단계`
+              : `Step ${nowIdx} of ${totalSteps}`}
           </Text>
         </Flex>
         <Progress value={stepsPct} size="3" />
@@ -138,15 +145,17 @@ const ProgressPanel = () => {
                           weight="bold"
                           color={done ? "green" : active ? "indigo" : "gray"}
                         >
-                          {p.title || `Phase ${idx}`}
+                          {lang === "ko"
+                            ? p.title_ko || p.title || `Phase ${idx}`
+                            : p.title || `Phase ${idx}`}
                         </Text>
-                        {p.text ? (
+                        {(p.text || p.text_ko) ? (
                           <Text
                             as="div"
                             size="2"
                             color={done ? "green" : active ? "indigo" : "gray"}
                           >
-                            {p.text}
+                            {lang === "ko" ? p.text_ko || p.text : p.text}
                           </Text>
                         ) : null}
                       </Box>

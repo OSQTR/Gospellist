@@ -4,47 +4,61 @@
     "current_amount": 2000
   },
   "roadmap": {
-    "now": 2,
+    "now": 5,
     "phases": [
       {
         "title": "Planning & Requirements Definition",
+        "title_ko": "기획 및 요구사항 정의",
         "text": "Define purpose, user personas, and core features.",
+        "text_ko": "목적, 사용자 페르소나, 핵심 기능을 정의합니다.",
         "output": "Feature specification, wireframes, data flow diagrams",
         "tags": ["planning", "MVP"]
       },
       {
         "title": "Design & Prototyping",
+        "title_ko": "디자인 및 프로토타이핑",
         "text": "Establish UX/UI design, confirm tech stack, and model data.",
+        "text_ko": "UX/UI 디자인 확립, 기술 스택 확정, 데이터 모델링.",
         "output": "High-fidelity mockups, API documentation, DB schema",
         "tags": ["design", "prototype", "UX"]
       },
       {
         "title": "Backend Development",
+        "title_ko": "백엔드 개발",
         "text": "Set up server and database, build APIs, and load Bible data.",
+        "text_ko": "서버·DB 구축, API 개발, 성경 데이터 적재.",
         "output": "AWS infrastructure, authentication system, tested APIs",
         "tags": ["backend", "API", "AWS"]
       },
       {
         "title": "App Development (Frontend)",
+        "title_ko": "앱 개발 (프론트엔드)",
         "text": "Build native Android/iOS UI, handle user inputs, integrate APIs.",
+        "text_ko": "Android/iOS 네이티브 UI 구축, 사용자 입력 처리, API 연동.",
         "output": "MVP mobile app with core features",
         "tags": ["frontend", "mobile", "cross-platform"]
       },
       {
         "title": "Integration & Testing",
+        "title_ko": "통합 및 테스트",
         "text": "Connect backend and app, perform QA, fix bugs, and optimize performance.",
+        "text_ko": "백엔드-앱 연결, QA, 버그 수정, 성능 최적화.",
         "output": "QA reports, bug fixes, crash reporting",
         "tags": ["integration", "testing", "QA"]
       },
       {
         "title": "Deployment & Operations",
+        "title_ko": "배포 및 운영",
         "text": "Publish to App Store and Play Store, set up monitoring and feedback channels.",
+        "text_ko": "App Store·Play Store 출시, 모니터링 및 피드백 채널 구축.",
         "output": "Signed builds, store listings, monitoring system",
         "tags": ["deployment", "operations", "monitoring"]
       },
       {
         "title": "Maintenance & Enhancement",
+        "title_ko": "유지보수 및 고도화",
         "text": "Incorporate feedback, release updates, improve performance, and design new features.",
+        "text_ko": "피드백 반영, 업데이트 배포, 성능 개선, 신기능 설계.",
         "output": "App updates, CI/CD pipeline, extended features",
         "tags": ["maintenance", "enhancement", "CI/CD"]
       }

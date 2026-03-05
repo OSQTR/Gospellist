@@ -138,6 +138,13 @@
         "desc": "Churches design and distribute custom reading plans, fostering daily Scripture reading culture."
       }
     ],
+    "headings": {
+      "features": "Features",
+      "target_users": "Target Users",
+      "impact": "Impact",
+      "evangelism_teams": "Evangelism Teams",
+      "churches": "Churches"
+    },
     "impact": {
       "evangelism_teams": [
         "Enable consistent engagement and long-term follow-up with seekers",
@@ -156,5 +163,12 @@
         "Encourage journaling via the Tablet of My Heart Meditation feature."
       ]
     }
+  },
+  "progress": {
+    "fundraising": "Fundraising Progress",
+    "roadmap": "Roadmap",
+    "raised": "Raised",
+    "goal": "Goal",
+    "step": "Step"
   }
 }

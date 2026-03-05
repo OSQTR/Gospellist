@@ -22,6 +22,7 @@ const Project = () => {
   const main = project.main ?? {};
   const features = project.features ?? [];
   const targetUsers = project.target_users ?? [];
+  const headings = project.headings ?? {};
   const impact = project.impact ?? {};
   const impactEvangelism = impact.evangelism_teams ?? [];
   const impactChurches = impact.churches ?? [];
@@ -63,7 +64,7 @@ const Project = () => {
       {/* Features */}
       <Container size="4" px="2" py="6">
         <Heading size="7" mb="4" color="indigo">
-          Features
+          {headings.features}
         </Heading>
         <Grid columns={{ initial: "1", sm: "2" }} gap="4">
           {features.map((f, idx) => (
@@ -84,7 +85,7 @@ const Project = () => {
       {/* Target Users */}
       <Container size="4" px="2" py="6">
         <Heading size="7" mb="4" color="indigo">
-          Target Users
+          {headings.target_users}
         </Heading>
         <Grid columns={{ initial: "1", sm: "2" }} gap="4">
           {targetUsers.map((u, idx) => (
@@ -105,13 +106,13 @@ const Project = () => {
       {/* Impact */}
       <Container size="4" px="2" py="6">
         <Heading size="7" mb="4" color="indigo">
-          Impact
+          {headings.impact}
         </Heading>
 
         <Grid columns={{ initial: "1", sm: "2" }} gap="5">
           <Box>
             <Heading size="5" mb="3">
-              Evangelism Teams
+              {headings.evangelism_teams}
             </Heading>
             <Box as="ul" style={{ paddingLeft: 18 }}>
               {impactEvangelism.map((item, i) => (
@@ -126,7 +127,7 @@ const Project = () => {
 
           <Box>
             <Heading size="5" mb="3">
-              Churches
+              {headings.churches}
             </Heading>
             <Box as="ul" style={{ paddingLeft: 18 }}>
               {impactChurches.map((item, i) => (
