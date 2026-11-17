@@ -85,7 +85,7 @@ body {
 }
 
 .hero-sub {
-  color: #abedd8;
+  color: #fff;
 }
 
 .hero-card {
@@ -104,10 +104,45 @@ body {
 }
 
 .hero-card-pain {
-  color: #abedd8;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .ministry-icon {
   flex-shrink: 0;
   color: #3d84a8;
+}
+
+/* 사역 전환 탭 (히어로 위) */
+.hero-tab {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-tab:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+.hero-tab-active,
+.hero-tab-active:hover {
+  color: #48466d;
+  font-weight: 700;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/* About 사명 섹션의 사역 카드 */
+.ministry-card {
+  display: block;
+  padding: 20px;
+  border-radius: 16px;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid var(--gray-a5);
+  background-color: var(--color-panel-solid);
 }

@@ -1,8 +1,9 @@
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import PageLayout from "./pages/PageLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Ministry from "./pages/Ministry";
+import Project from "./pages/Project";
 
 export const router = createBrowserRouter([
   {
@@ -11,11 +12,8 @@ export const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
       { path: "/ministry/:id", element: <Ministry /> },
-      // 기존 Lumen365 소개 페이지 → 성경앱 사역 페이지로 통합
-      {
-        path: "/project",
-        element: <Navigate to="/ministry/bible-app" replace />,
-      },
+      // 우리교회 말씀심방 개발 내용 (기능·대상·효과·로드맵)
+      { path: "/project", element: <Project /> },
     ],
   },
 ]);

@@ -12,7 +12,7 @@ import {
   Text,
 } from "@radix-ui/themes";
 import { MINISTRY_ICONS } from "../components/ministryIcons";
-import Project from "./Project";
+import { ArrowRight } from "lucide-react";
 
 export default function Ministry() {
   const { id } = useParams();
@@ -52,17 +52,14 @@ export default function Ministry() {
           {/* 사역 전환 탭 */}
           <Flex gap="2" wrap="wrap" mt="5" aria-label={ui.list}>
             {items.map((x) => (
-              <Button
+              <RouterLink
                 key={x.id}
-                asChild
-                size="2"
-                radius="full"
-                variant={x.id === m.id ? "solid" : "soft"}
-                color="gray"
-                highContrast={x.id === m.id}
+                to={`/ministry/${x.id}`}
+                className={`hero-tab${x.id === m.id ? " hero-tab-active" : ""}`}
+                aria-current={x.id === m.id ? "page" : undefined}
               >
-                <RouterLink to={`/ministry/${x.id}`}>{x.name}</RouterLink>
-              </Button>
+                {x.name}
+              </RouterLink>
             ))}
           </Flex>
         </Container>
@@ -89,15 +86,15 @@ export default function Ministry() {
             {p}
           </Text>
         ))}
+        {/* 성경앱: 개발 내용은 별도 페이지(/project) */}
+        {m.id === "bible-app" && (
+          <Button asChild color="indigo" size="3" radius="full" mt="4">
+            <RouterLink to="/project">
+              {ui.app_cta} <ArrowRight size={16} />
+            </RouterLink>
+          </Button>
+        )}
       </Container>
-
-      {/* 성경앱: 우리교회 말씀심방 소개 (기존 /project 내용) */}
-      {m.id === "bible-app" && (
-        <>
-          <Separator size="4" />
-          <Project />
-        </>
-      )}
     </>
   );
 }

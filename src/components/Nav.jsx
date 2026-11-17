@@ -26,6 +26,7 @@ export default function Nav() {
   const dispatch = useDispatch();
   const mode = useSelector((s) => s.theme.mode);
   const lang = useSelector((s) => s.lang.code);
+  const appName = useSelector((s) => s.i18n.messages?.project?.main?.title);
 
   const { pathname } = useLocation();
   const LINKS = [
@@ -35,6 +36,11 @@ export default function Nav() {
       to: "/ministry/family",
       label: "Ministry",
       match: (p) => p.startsWith("/ministry"),
+    },
+    {
+      to: "/project",
+      label: appName || "App",
+      match: (p) => p.startsWith("/project"),
     },
     // 필요 시 여기에 계속 추가
   ];

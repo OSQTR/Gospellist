@@ -3,7 +3,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import {
   Box,
-  Button,
   Card,
   Container,
   Flex,
@@ -12,6 +11,7 @@ import {
   Separator,
   Text,
 } from "@radix-ui/themes";
+import Roadmap from "../components/Roadmap";
 
 const Project = () => {
   const { messages, status } = useSelector((s) => s.i18n);
@@ -29,34 +29,48 @@ const Project = () => {
 
   return (
     <>
-      {/* 앱 소개 (Ministry 페이지의 성경앱 사역 안에서 렌더) */}
-      <Container
-        size="4"
-        pt="6"
-        px="2"
-        style={{ backgroundColor: "var(--indigo-3)" }}
-      >
-        <Flex my="5" direction={{ initial: "column", sm: "row" }}>
-          <Box p="4" width={{ initial: "100%", sm: "100%" }}>
-            <Heading size="9" color="indigo" weight="bold" my="4">
-              {main.title}
-            </Heading>
-            <Text as="p" color="gray" size="5" my="4">
-              {main.sub_title}
+      {/* Hero */}
+      <Box className="hero-banner">
+        <Container size="4" px="4" pt="9" pb="6">
+          <Flex
+            pt="8"
+            gap="6"
+            align="center"
+            direction={{ initial: "column", sm: "row" }}
+          >
+            <Box width={{ initial: "100%", sm: "55%" }}>
+              <Heading
+                size={{ initial: "8", sm: "9" }}
+                weight="bold"
+                my="4"
+                className="hero-title"
+              >
+                {main.title}
+              </Heading>
+              <Text as="p" size="5" className="hero-sub">
+                {main.sub_title}
+              </Text>
+            </Box>
+            <Box width={{ initial: "100%", sm: "45%" }}>
+              <img
+                src="/img/sec1.png"
+                alt={main.title}
+                width="100%"
+                height="auto"
+              />
+            </Box>
+          </Flex>
+        </Container>
+      </Box>
+
+      {/* 앱 배경 */}
+      <Container size="4" px="4" py="6">
+        {Array.isArray(main.text) &&
+          main.text.map((p, i) => (
+            <Text as="p" key={i} size="4" color="gray" mb="3">
+              {p}
             </Text>
-            {Array.isArray(main.text) &&
-              main.text.map((p, i) => (
-                <Text as="p" key={i} size="4" color="gray" mb="3">
-                  {p}
-                </Text>
-              ))}
-            {main.cta ? (
-              <Button color="indigo" variant="solid" size="3" radius="full">
-                {main.cta}
-              </Button>
-            ) : null}
-          </Box>
-        </Flex>
+          ))}
       </Container>
 
       <Separator size="4" />
@@ -140,6 +154,16 @@ const Project = () => {
             </Box>
           </Box>
         </Grid>
+      </Container>
+
+      <Separator size="4" />
+
+      {/* Roadmap */}
+      <Container size="4" px="2" py="6">
+        <Heading size="7" mb="4" color="indigo">
+          {headings.roadmap}
+        </Heading>
+        <Roadmap />
       </Container>
     </>
   );

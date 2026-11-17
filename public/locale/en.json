@@ -30,28 +30,38 @@
   "about": {
     "main": {
       "title": "Gospellist",
-      "sub_title": "Gospellist is a non-profit organization dedicated to developing and distributing Bible apps."
+      "sub_title": "Gospellist is a nonprofit mission organization that carries the pain of the nations and serves through family ministry, livelihood ministry, digital evangelism and Bible app development & distribution."
     },
-    "section1": {
+    "mission": {
+      "sub_title": "Four kinds of pain in the nations",
       "title": "Our Mission",
       "text": [
-        "Our mission is to create and share Bible apps that help seekers, non-believers, and believers around the world engage with Scripture daily. We believe that when people encounter God’s Word each day, lives are transformed.",
-        "To fulfill this mission, we have already built strong capabilities in Bible app development and are actively working on new projects to meet the needs of a global audience."
+        "The pain of the family, of the economy, of the soul and of faith. We go forward carrying these four kinds of pain that the nations suffer.",
+        "We help Father School and Mother School enter countries where wives are beaten and abandoned, and we train unemployed young people as software developers so they can earn their own living.",
+        "We share the gospel through digital ads with those who have never heard it, and we distribute personalized Bible apps so that believers on the mission field and in Korean churches can read the Bible well."
       ]
     },
-    "section2": {
-      "title": "Empowering Underprivileged Youth",
+    "history": {
+      "sub_title": "Where we have come from",
+      "title": "Experience built in the field",
+      "li": [
+        "Over the past 10 years, we have opened and supported Father Schools and Mother Schools in the Middle East and helped local ministry teams become self-reliant.",
+        "We distributed personalized Bibles that overcome oral culture, illiteracy and the difficulty of the Bible's script to seekers, converts and believers in the Arabic-speaking world.",
+        "Through years of digital ministry, we developed the “Sustained Digital Evangelism Model through Bible Meditation Care” and presented it at KMQ, KMQ English, GMLF and elsewhere.",
+        "We have built many pieces of software, including Our Church Malsseum Simbang."
+      ]
+    },
+    "app": {
+      "sub_title": "Financial self-sufficiency",
+      "title": "A Bible app that sustains the ministry",
       "text": [
-        "We are also committed to training young people from underprivileged communities to become skilled app developers. By sharing our experience and knowledge in Bible app development, we provide these youth with real learning opportunities—and real work. They are not only trained but also given projects, enabling them to participate in app development and build a path toward economic self-reliance."
-      ]
+        "Our Church Malsseum Simbang is a Bible app personalized for each church and each person, also distributed as Shalom Script (English) and Kitab Al-Salam (Arabic).",
+        "When Korean churches use the app and we receive the usage fee as an offering or a subscription, that income can cover the costs of our other ministries.",
+        "If the app is used widely in Korean churches, we can become financially self-sufficient."
+      ],
+      "cta": "See Our Church Malsseum Simbang"
     },
-    "section3": {
-      "title": "Supporting Digital Evangelism Worldwide",
-      "text": [
-        "Before founding this organization, our core members were already engaged in developing Bible apps and supporting digital evangelism teams in the Middle East. Now, we are expanding this work to support digital mission teams across the globe—providing tools, training, and spiritual resources to help them share the Gospel effectively in the digital age."
-      ]
-    },
-    "section4": {
+    "together": {
       "title": "We Do This Together—with Gospellists",
       "text_head": "We believe that this mission is carried out together with Gospellists from all walks of life:",
       "text": [
@@ -62,7 +72,7 @@
         "And Bible readers who live out the Word each day."
       ]
     },
-    "section5": {
+    "closing": {
       "title": "You are Gospellist."
     }
   },
@@ -120,7 +130,9 @@
       "target_users": "Target Users",
       "impact": "Impact",
       "evangelism_teams": "Evangelism Teams",
-      "churches": "Churches"
+      "churches": "Churches",
+      "roadmap": "Development Roadmap",
+      "step": "Step"
     },
     "impact": {
       "evangelism_teams": [
@@ -145,7 +157,8 @@
     "ui": {
       "more": "Learn more",
       "detail": "In detail",
-      "list": "Ministries"
+      "list": "Ministries",
+      "app_cta": "About Our Church Malsseum Simbang"
     },
     "items": [
       {
