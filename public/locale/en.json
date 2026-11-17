@@ -3,28 +3,6 @@
     "main": {
       "title": "Carrying the pain of the nations",
       "sub_title": "Where families, livelihoods, souls and faith are hurting, we serve through four ministries."
-    },
-    "section1": {
-      "title": "Team",
-      "sub_title": "Our current team members who carry out the ministry.",
-      "members": [
-        {
-          "name": "Young-soo Jun",
-          "avatar": "/img/jun.jpeg",
-          "position": "CEO",
-          "tag": "CEO",
-          "bio": "Elder at Onnuri Church, Project Manager",
-          "contact": "vines56@gmail.com"
-        },
-        {
-          "name": "Moses Lee",
-          "avatar": "/img/moses.jpeg",
-          "position": "Director",
-          "tag": "Director",
-          "bio": "App Dev, UX/UI Designer",
-          "contact": "clecat1005@gmail.com"
-        }
-      ]
     }
   },
   "about": {
@@ -70,6 +48,28 @@
         "Donors who give generously,",
         "Intercessors who pray faithfully,",
         "And Bible readers who live out the Word each day."
+      ]
+    },
+    "team": {
+      "title": "Team",
+      "sub_title": "Our current team members who carry out the ministry.",
+      "members": [
+        {
+          "name": "Young-soo Jun",
+          "avatar": "/img/jun.jpeg",
+          "position": "CEO",
+          "tag": "CEO",
+          "bio": "Elder at Onnuri Church, Project Manager",
+          "contact": "vines56@gmail.com"
+        },
+        {
+          "name": "Moses Lee",
+          "avatar": "/img/moses.jpeg",
+          "position": "Director",
+          "tag": "Director",
+          "bio": "App Dev, UX/UI Designer",
+          "contact": "clecat1005@gmail.com"
+        }
       ]
     },
     "closing": {

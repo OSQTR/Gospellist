@@ -2,8 +2,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link as RouterLink } from "react-router-dom";
 import {
+  Avatar,
+  Badge,
   Box,
   Button,
+  Card,
   Container,
   Flex,
   Grid,
@@ -11,8 +14,9 @@ import {
   Section,
   Separator,
   Text,
+  Tooltip,
 } from "@radix-ui/themes";
-import { ArrowRight, Flag } from "lucide-react";
+import { ArrowRight, Flag, Plus } from "lucide-react";
 import { MINISTRY_ICONS } from "../components/ministryIcons";
 import WorldImg from "../assets/undraw_connected-world_anke.svg";
 import StepImg from "../assets/undraw_stepping-up.svg";
@@ -62,6 +66,7 @@ export default function About() {
   const app = a.app || {};
   const together = a.together || {};
   const closing = a.closing || {};
+  const team = a.team || {};
   const ministries = messages?.ministry?.items || [];
 
   return (
@@ -203,6 +208,62 @@ export default function About() {
             </Text>
           ))}
         </Container>
+      </Section>
+
+      {/* 팀 */}
+      <Section size="2" align="center">
+        <Heading size="9" color="indigo" align="center">
+          {team.title}
+        </Heading>
+        <Text as="p" size="4" my="4" align="center">
+          {team.sub_title}
+        </Text>
+        <Flex
+          align="center"
+          justify="center"
+          gap="4"
+          wrap="wrap"
+          //   direction={{ initial: "column", sm: "row" }}
+          direction="row"
+        >
+          {team.members?.map((member) => (
+            <Box key={member.contact} width="185px">
+              <Card variant="classic" className="scale" size="1">
+                <Flex gap="3" align="center" direction="column">
+                  <Avatar
+                    size="9"
+                    src={member.avatar || undefined}
+                    radius="small"
+                    fallback={member.name[0]}
+                  />
+                  <Flex gap="1" wrap="wrap">
+                    <Badge color="teal">Gospellist</Badge>
+                    <Badge color="blue">{member.tag}</Badge>
+                    <Badge color="indigo">South Korea</Badge>
+                  </Flex>
+
+                  <Text as="h3" size="5" weight="bold" color="indigo">
+                    {member.name}
+                  </Text>
+                  <Box>
+                    <Text as="p" size="2">
+                      {member.bio}
+                    </Text>
+                  </Box>
+                  <Text as="div" size="1" color="gray">
+                    {member.contact}
+                  </Text>
+                </Flex>
+              </Card>
+            </Box>
+          ))}
+
+          <Tooltip content="Join the Team">
+            <Button size="3" color="indigo" radius="full">
+              <Plus />
+            </Button>
+          </Tooltip>
+        </Flex>
       </Section>
 
       {/* 마무리 배너 */}

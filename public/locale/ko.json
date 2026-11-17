@@ -3,28 +3,6 @@
     "main": {
       "title": "열방의 아픔을 품고 나아갑니다",
       "sub_title": "가정과 경제, 영혼과 신앙의 아픔이 있는 곳에서 네 가지 사역으로 섬깁니다."
-    },
-    "section1": {
-      "title": "팀",
-      "sub_title": "사역을 실현하는 현재 팀 멤버입니다.",
-      "members": [
-        {
-          "name": "전영수",
-          "avatar": "/img/jun.png",
-          "position": "대표이사",
-          "tag": "CEO",
-          "bio": "온누리교회 장로",
-          "contact": "vines51@gmail.com"
-        },
-        {
-          "name": "이모세",
-          "avatar": "/img/moses.jpeg",
-          "position": "이사",
-          "tag": "Director",
-          "bio": "Programmer, Designer",
-          "contact": "clecat1005@gmail.com"
-        }
-      ]
     }
   },
   "about": {
@@ -70,6 +48,28 @@
         "아낌없이 후원하는 후원자,",
         "신실하게 기도하는 중보자,",
         "그리고 날마다 말씀을 삶으로 사는 성경 독자."
+      ]
+    },
+    "team": {
+      "title": "팀",
+      "sub_title": "사역을 실현하는 현재 팀 멤버입니다.",
+      "members": [
+        {
+          "name": "전영수",
+          "avatar": "/img/jun.png",
+          "position": "대표이사",
+          "tag": "CEO",
+          "bio": "온누리교회 장로",
+          "contact": "vines51@gmail.com"
+        },
+        {
+          "name": "이모세",
+          "avatar": "/img/moses.jpeg",
+          "position": "이사",
+          "tag": "Director",
+          "bio": "Programmer, Designer",
+          "contact": "clecat1005@gmail.com"
+        }
       ]
     },
     "closing": {
