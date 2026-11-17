@@ -16,171 +16,122 @@ import {
 } from "@radix-ui/themes";
 import React from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import ImageUrl from "../assets/undraw_connected-world_anke.svg";
-import ImageUrl2 from "../assets/undraw_stepping-up.svg";
-import { Flag, Plus } from "lucide-react";
-import ProgressPanel from "../components/Progress";
+import { Link as RouterLink } from "react-router-dom";
+import { ArrowRight, Plus } from "lucide-react";
+import { MINISTRY_ICONS } from "../components/ministryIcons";
 
 export default function Home() {
   const { messages, status } = useSelector((s) => s.i18n);
-  const navigate = useNavigate();
 
   if (status === "loading") return <h2>Loading…</h2>;
   if (status === "failed") return <h2>Load error</h2>;
 
   const t = messages?.home?.main || {};
   const s1 = messages?.home?.section1 || {};
-  const s2 = messages?.home?.section2 || {};
-  const s3 = messages?.home?.section3 || {};
-  const s4 = messages?.home?.section4 || {};
-
-  const goAbout = () => {
-    navigate("/about");
-  };
-
-  const goGoal = () => {
-    navigate("/project");
-  };
+  const ministries = messages?.ministry?.items || [];
+  const ui = messages?.ministry?.ui || {};
 
   return (
     <>
-      <Container size="4" mt="9" px="2">
-        <Flex my="5" direction={{ initial: "column-reverse", sm: "row" }}>
-          <Box p="4" width={{ initial: "100%", sm: "50%" }}>
-            <Flex gap="2" my="4">
-              <Badge color="blue">Bible</Badge>
-              <Badge color="green">Daily</Badge>
-              <Badge color="iris">Devotion</Badge>
-            </Flex>
-            <Heading size="9" color="indigo" weight="bold" my="4">
+      {/* Hero banner: 4가지 아픔 → 4대 사역 */}
+      <Box className="hero-banner">
+        <Container size="4" px="4" pt="9" pb="8">
+          <Box pt="8" pb="6">
+            <Heading
+              size={{ initial: "8", sm: "9" }}
+              weight="bold"
+              my="4"
+              className="hero-title"
+            >
               {t.title}
             </Heading>
-            <Text as="p" color="gray" size="5" my="4">
+            <Text as="p" size="5" className="hero-sub">
               {t.sub_title}
             </Text>
-            <Button
-              color="indigo"
-              variant="solid"
-              size="3"
-              radius="full"
-              onClick={goAbout}
-            >
-              {t.cta}
-            </Button>
           </Box>
-          <Box width={{ initial: "100%", sm: "50%" }}>
-            <img
-              src={ImageUrl}
-              alt="Global Spread"
-              width={"100%"}
-              height={"auto"}
-            />
-          </Box>
-        </Flex>
-      </Container>
-      <Separator size="4" />
-      <Section size="1" style={{ backgroundColor: "#e0efef10" }}>
-        <Flex
-          my="8"
-          direction={{ initial: "column-reverse", sm: "row-reverse" }}
-        >
-          <Box
-            p={{ initial: "5", sm: "2" }}
-            width={{ initial: "100%", sm: "50%" }}
-          >
-            <Heading size="5" color="indigo">
-              {s2.sub_title}
-            </Heading>
-            <Heading size="9" wrap="balance" my="4">
-              {s2.title}
-            </Heading>
-            <Flex gap="2" my="4">
-              <Badge color="blue">App</Badge>
-              <Badge color="green">Web</Badge>
-              <Badge color="orange">Study</Badge>
-              <Badge color="cyan">social mission</Badge>
-            </Flex>
-            {s2.li?.map((li, idx) => (
-              <Flex key={idx} gap="3" align="center">
-                <Box flexBasis={1}>
-                  <Flag />
-                </Box>
-                <Text as="p" color="gray" size="5" my="2">
-                  {li}
-                </Text>
-              </Flex>
-            ))}
-          </Box>
-          <Box maxWidth="560px" width={{ initial: "100%", sm: "50%" }}>
-            <img
-              src="/img/sec1.png"
-              alt="apps and missions"
-              width={"100%"}
-              height={"auto"}
-              align="left"
-              className="tilt"
-            />
-          </Box>
-        </Flex>
-      </Section>
+          <Grid columns={{ initial: "1", xs: "2", md: "4" }} gap="3">
+            {ministries.map((m) => {
+              const Icon = MINISTRY_ICONS[m.id];
+              return (
+                <RouterLink
+                  key={m.id}
+                  to={`/ministry/${m.id}`}
+                  className="hero-card scale"
+                >
+                  <Flex direction="column" gap="2">
+                    {Icon ? <Icon size={28} /> : null}
+                    <Text size="2" className="hero-card-pain">
+                      {m.pain}
+                    </Text>
+                    <Flex align="center" justify="between" gap="2">
+                      <Text size="5" weight="bold">
+                        {m.name}
+                      </Text>
+                      <ArrowRight size={18} />
+                    </Flex>
+                  </Flex>
+                </RouterLink>
+              );
+            })}
+          </Grid>
+        </Container>
+      </Box>
 
-      <Separator size="4" />
-      <Container size="4" px="2">
-        <Flex
-          my="5"
-          direction={{ initial: "column-reverse", sm: "row" }}
-          justify="center"
-          align="center"
-        >
-          <Box p="4" width={{ initial: "100%", sm: "50%" }}>
-            <Heading size="5" color="indigo">
-              {s3.sub_title}
-            </Heading>
-            <Heading size="9" color="indigo" weight="bold" my="4">
-              {s3.title}
-            </Heading>
-            {s3.li?.map((li, idx) => (
-              <Flex key={idx} gap="3" align="center">
-                <Box flexBasis={1}>
-                  <Flag />
-                </Box>
-                <Text as="p" color="gray" size="5" my="2">
-                  {li}
-                </Text>
-              </Flex>
-            ))}
-            <Button
-              color="indigo"
-              variant="solid"
-              size="3"
-              radius="full"
-              onClick={goGoal}
+      {/* 사역별 요약 섹션 */}
+      {ministries.map((m, idx) => {
+        const Icon = MINISTRY_ICONS[m.id];
+        return (
+          <React.Fragment key={m.id}>
+            {idx > 0 && <Separator size="4" />}
+            <Section
+              size="2"
+              style={
+                idx % 2 ? { backgroundColor: "var(--indigo-2)" } : undefined
+              }
             >
-              {s3.cta}
-            </Button>
-          </Box>
-          <Box width={{ initial: "60%", sm: "30%" }}>
-            <img
-              src={ImageUrl2}
-              alt="Our Goal"
-              width={"100%"}
-              height={"auto"}
-            />
-          </Box>
-        </Flex>
-      </Container>
+              <Container size="3" px="4">
+                <Flex
+                  gap="6"
+                  align="start"
+                  direction={{
+                    initial: "column",
+                    sm: idx % 2 ? "row-reverse" : "row",
+                  }}
+                >
+                  <Box className="ministry-icon">
+                    {Icon ? <Icon size={56} /> : null}
+                  </Box>
+                  <Box>
+                    <Heading size="5" color="indigo">
+                      {m.pain}
+                    </Heading>
+                    <Heading size="8" weight="bold" my="3">
+                      {m.name}
+                    </Heading>
+                    {m.summary?.map((p, i) => (
+                      <Text key={i} as="p" color="gray" size="4" my="2">
+                        {p}
+                      </Text>
+                    ))}
+                    <Button
+                      asChild
+                      color="indigo"
+                      size="3"
+                      radius="full"
+                      mt="4"
+                    >
+                      <RouterLink to={`/ministry/${m.id}`}>
+                        {ui.more} <ArrowRight size={16} />
+                      </RouterLink>
+                    </Button>
+                  </Box>
+                </Flex>
+              </Container>
+            </Section>
+          </React.Fragment>
+        );
+      })}
 
-      <Separator size="4" />
-      <Container size="3" my="5">
-        <Heading size="5" color="indigo">
-          {s4.sub_title}
-        </Heading>
-        <Heading size="9" weight="bold" my="4">
-          {s4.title}
-        </Heading>
-        <ProgressPanel />
-      </Container>
       <Separator size="4" />
       <Section size="2" align="center">
         <Heading size="9" color="indigo" align="center">

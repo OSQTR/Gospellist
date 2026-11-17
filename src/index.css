@@ -73,3 +73,41 @@ body {
   margin-top: -24px;
   animation: tilt-shaking 3s infinite;
 }
+
+/* Hero banner (theme colors: 48466D, 3D84A8, 46CDCF, ABEDD8) */
+.hero-banner {
+  background: linear-gradient(135deg, #48466d 0%, #3d84a8 60%, #46cdcf 100%);
+  color: #fff;
+}
+
+.hero-title {
+  color: #fff;
+}
+
+.hero-sub {
+  color: #abedd8;
+}
+
+.hero-card {
+  display: block;
+  padding: 20px;
+  border-radius: 16px;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+.hero-card:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-card-pain {
+  color: #abedd8;
+}
+
+.ministry-icon {
+  flex-shrink: 0;
+  color: #3d84a8;
+}

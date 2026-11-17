@@ -29,10 +29,10 @@ const Project = () => {
 
   return (
     <>
-      {/* Hero */}
+      {/* 앱 소개 (Ministry 페이지의 성경앱 사역 안에서 렌더) */}
       <Container
         size="4"
-        pt="9"
+        pt="6"
         px="2"
         style={{ backgroundColor: "var(--indigo-3)" }}
       >

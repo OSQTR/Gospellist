@@ -1,9 +1,8 @@
 {
   "home": {
     "main": {
-      "title": "Gospellist",
-      "sub_title": "develops and distributes Bible apps worldwide to inspire both non-believers and believers to engage with the Word of God daily.",
-      "cta": "About Ministry"
+      "title": "Carrying the pain of the nations",
+      "sub_title": "Where families, livelihoods, souls and faith are hurting, we serve through four ministries."
     },
     "section1": {
       "title": "Team",
@@ -26,28 +25,6 @@
           "contact": "clecat1005@gmail.com"
         }
       ]
-    },
-    "section2": {
-      "title": "What we have been able to do thanks to you",
-      "sub_title": "Support shaped by voices from the field",
-      "li": [
-        "We developed Bible apps and supported evangelism teams for digital missions in the Middle East.",
-        "With accumulated experience and knowledge, we confirmed the potential for distributing Bible apps."
-      ]
-    },
-    "section3": {
-      "title": "The path we are heading toward",
-      "sub_title": "What they need most",
-      "li": [
-        "We will newly develop and distribute Bible apps so that anyone can access the Word daily.",
-        "We will raise young people as IT specialists and media professionals, and open opportunities for them to engage in ministry.",
-        "We will continue to support and collaborate with digital evangelism teams across the nations."
-      ],
-      "cta": "About Project"
-    },
-    "section4": {
-      "title": "Lumen365",
-      "sub_title": "Currently active projects"
     }
   },
   "about": {
@@ -91,11 +68,11 @@
   },
   "project": {
     "main": {
-      "title": "Bible app to be developed",
-      "sub_title": "We are planning to develop a Bible app called Lumen365.",
+      "title": "Our Church Malsseum Simbang",
+      "sub_title": "A Bible app personalized for each church and each person, also distributed as Shalom Script (English) and Kitab Al-Salam (Arabic).",
       "text": [
-        "The idea for this new Bible app was born out of a recurring challenge in digital evangelism: many seekers and non-believers respond to online gospel ads and request a Bible—but soon disappear without receiving proper follow-up from evangelism teams.",
-        "In addition, in many regions, it is still uncommon for church members to read and meditate on the Bible daily. Our goal is to develop an app that both encourages and enables seekers and believers to engage with Scripture every day."
+        "The idea for Our Church Malsseum Simbang was born out of a recurring challenge in digital evangelism: many seekers and non-believers respond to online gospel ads and request a Bible—but soon disappear without receiving proper follow-up from evangelism teams.",
+        "In addition, in many regions, it is still uncommon for church members to read and meditate on the Bible daily. Our Church Malsseum Simbang encourages and enables both seekers and believers to engage with Scripture every day."
       ]
     },
     "features": [
@@ -164,11 +141,79 @@
       ]
     }
   },
-  "progress": {
-    "fundraising": "Fundraising Progress",
-    "roadmap": "Roadmap",
-    "raised": "Raised",
-    "goal": "Goal",
-    "step": "Step"
+  "ministry": {
+    "ui": {
+      "more": "Learn more",
+      "detail": "In detail",
+      "list": "Ministries"
+    },
+    "items": [
+      {
+        "id": "family",
+        "pain": "Pain of the family",
+        "name": "Family Ministry",
+        "summary": [
+          "Many wives are beaten by their husbands. Many wives are abandoned by their husbands.",
+          "This still happens in many countries.",
+          "Father School must enter these countries. Mother School must enter these countries.",
+          "We take on the work that comes before and after Father School and Mother School enter."
+        ],
+        "detail": [
+          "We want to confront the problem of beaten and abandoned wives head-on.",
+          "This is Father School and Mother School for Muslims.",
+          "It is dangerous and the barriers are high, so it requires great wisdom and cooperation.",
+          "Over the past 10 years we have opened and supported Father Schools and Mother Schools in the Middle East and helped local ministry teams become self-reliant.",
+          "Drawing on this experience, wisdom and network of partners, we carry out this difficult ministry to Muslim families, asking for God's special guidance and protection."
+        ]
+      },
+      {
+        "id": "livelihood",
+        "pain": "Pain of the economy",
+        "name": "Livelihood Ministry",
+        "summary": [
+          "We grieve that young people in poor countries cannot find work and remain unemployed.",
+          "We want to give each of them a computer and teach them how to build apps, which is what we do best.",
+          "We want to raise them as software developers so that they can earn their own living."
+        ],
+        "detail": [
+          "We want to teach underprivileged young people in the Middle East how to develop software with AI coding, focusing our guidance on the parts that need a human touch.",
+          "We have built many pieces of software, including Our Church Malsseum Simbang. Our mission is to share this experience and raise them as software developers.",
+          "Our ministry model does not end with teaching: through ongoing mentorship, we help them become self-reliant."
+        ]
+      },
+      {
+        "id": "digital",
+        "pain": "Pain of the soul",
+        "name": "Digital Evangelism",
+        "summary": [
+          "We have compassion for people who have never heard the gospel and do not know Jesus.",
+          "We want to share the gospel with them through digital advertising evangelism, either directly or by supporting others.",
+          "When we run gospel ads, the Holy Spirit leads people to see them, respond, receive Jesus and request a Bible. The numbers are astonishing.",
+          "We want to send the names of the souls the Holy Spirit has led to believers in Korean churches and ask them to pray. Then you can become a channel of blessing, as described in Genesis 12:3."
+        ],
+        "detail": [
+          "We want to support digital evangelism teams and increase the fruit of their outreach.",
+          "Through years of digital ministry, we developed the “Sustained Digital Evangelism Model through Bible Meditation Care” (presented at KMQ, KMQ English, GMLF and elsewhere).",
+          "This model works well with the Our Church Malsseum Simbang app (Shalom Script in English, Kitab Al-Salam in Arabic). Alongside the app, we focus on raising evangelism outcomes, including second-stage evangelism."
+        ]
+      },
+      {
+        "id": "bible-app",
+        "pain": "Pain of faith",
+        "name": "Bible App Development & Distribution",
+        "summary": [
+          "We grieve that seekers, converts and believers on the mission field struggle to read the Bible.",
+          "The reasons include oral culture, illiteracy, the difficulty of the Bible's script and more. We have experience solving these problems and distributing personalized Bibles to them.",
+          "We want to distribute this personalized Bible app to Korean churches and to seekers, converts and believers in the Arabic-speaking world.",
+          "The Bible app for Korean churches is called “Our Church Malsseum Simbang.” It is personalized for each church and each person, and we support every pastor in visiting their whole congregation and each member with the Word that fits them."
+        ],
+        "detail": [
+          "The Our Church Malsseum Simbang app we develop can become a source of funding for our organization.",
+          "Korean churches use the Bible app we provide, and we can receive the usage fee as an offering or a subscription.",
+          "This income can then cover the costs of the ministries described above.",
+          "If the app is used widely in Korean churches, we can become financially self-sufficient."
+        ]
+      }
+    ]
   }
 }

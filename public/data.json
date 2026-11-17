@@ -1,8 +1,4 @@
 {
-  "fund": {
-    "target_amount": 20000,
-    "current_amount": 2000
-  },
   "roadmap": {
     "now": 5,
     "phases": [

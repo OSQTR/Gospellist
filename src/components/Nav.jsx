@@ -32,9 +32,9 @@ export default function Nav() {
     { to: "/", label: "Home", match: (p) => p === "/" },
     { to: "/about", label: "About", match: (p) => p.startsWith("/about") },
     {
-      to: "/project",
-      label: "project",
-      match: (p) => p.startsWith("/project"),
+      to: "/ministry/family",
+      label: "Ministry",
+      match: (p) => p.startsWith("/ministry"),
     },
     // 필요 시 여기에 계속 추가
   ];
